@@ -25,6 +25,9 @@ export class UsersRepository {
     userFilterQuery: FilterQuery<User>,
     user: Partial<User>,
   ): Promise<User> {
-    return this.userModel.findOneAndUpdate(userFilterQuery, user);
+    // Always return the new data after updating it - new: true
+    return this.userModel.findOneAndUpdate(userFilterQuery, user, {
+      new: true,
+    });
   }
 }
