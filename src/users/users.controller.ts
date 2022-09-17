@@ -3,7 +3,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
 import { User } from './schemas/user.schema';
-import { UsersService } from './users.services';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
